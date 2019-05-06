@@ -1,21 +1,52 @@
 .home {
+    header {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px dashed @silver;
+      div.header-text {
 
+        h2 {
+          margin: 15px 0;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+        @media @mobile {
+          padding: 15px 25px;
+        }
+        @media @tablet {
+          padding: 15px 25px;
+        }
+      }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+      align-content: center;
+    }
+    @media @tablet {
+      padding: 20px;
+    }
 
-   
-    
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 80%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width: 80%;
+      }
 
       img {
         border-radius: 10px;
@@ -30,6 +61,9 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile{
+        order: -1;
+      }
     }
 
     .img-content {
@@ -52,10 +86,31 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @mobile{
+      flex-direction: column;
+      align-items: center;
+    }
+    @media @tablet{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+    }
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile{
+        width: 80%;
+      }
+      @media @tablet{
+        width: 48%;
+      }
+      div.btn {
+        .button(80%, 10px);
+        &:hover {
+          cursor: pointer;
+        .hover-shadow();
+        }
+      }
     }
   }
 }// home

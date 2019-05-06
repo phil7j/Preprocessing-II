@@ -1,1 +1,28 @@
 // Mixins in here
+
+.button(@width, @padding){
+    width: @width;
+    background: @button-bg;
+    text-align: center;
+    color: white;
+    padding: @padding;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: 1px solid @shark;
+}
+
+.hover-shadow(){
+    transition: box-shadow 500ms ease;
+    &:hover {
+        box-shadow: 4px 3px 3px #888888;
+    }
+}
+
+.hover-color(){
+    transition: color 400ms ease-in-out, border-bottom 600ms ease-in-out;
+    &:hover {
+        color: @eastern-blue;
+        border-bottom: 2px dotted @eastern-blue;
+    }
+}
